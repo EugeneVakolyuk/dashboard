@@ -667,23 +667,23 @@ tr:hover {
     }
 
     aside nav {
+        display: none;
         justify-content: flex-start;
         padding-top: 170px;
         right: 0;
         width: 100%;
         height: 100vh;
         background-color: white;
-        visibility: hidden;
         border-radius: 0;
-        transition: 0.2s ease-in-out all;
+        transition: 0.2s;
         z-index: 10;
     }
     .nav_item {
+        display: none;
         width: 80%;
         height: 35px;
-        visibility: hidden;
         transform: translateX(0) translateY(20px);
-        transition: 0.2s ease-in-out 0.1s;
+        transition: 0.2s;
     }
     .nav_item__text {
         font-size: 24px;
@@ -699,6 +699,7 @@ tr:hover {
     }
 
     .user {
+        display: none;
         flex-direction: column;
         align-items: center;
         top: 70px;
@@ -707,8 +708,7 @@ tr:hover {
         height: 130px;
         padding: 2px 4px;
         transform: translateY(20px);
-        visibility: hidden;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
         z-index: 10;
     }
     .user__photo {
@@ -737,11 +737,11 @@ tr:hover {
     }
 
     #burger-toggle:checked ~ nav {
-        visibility: visible;
+        display: flex;
     }
     #burger-toggle:checked ~ nav .nav_item,
     #burger-toggle:checked ~ .user {
-        visibility: visible;
+        display: flex;
         transform: translateX(0);
     }
 }
