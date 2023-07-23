@@ -28,15 +28,18 @@ window.addEventListener("resize", function() {
     getPageHeight();
 });
 
-// Locking scrollbar
+// Burger menu animation & Locking scrollbar
 
 const burgerToggle = document.getElementById('burger-toggle');
+const burgerElement = document.querySelector('.burger_btn > span')
+
 const body = document.body;
 
 burgerToggle.addEventListener('change', function() {
-    if (this.checked) {
-        body.style.overflow = 'hidden';
-    } else {
-        body.style.overflow = 'auto';
-    }
+    body.style.overflow = burgerToggle.checked ? 'hidden' : 'auto';
+    burgerElement.style.transform = burgerToggle.checked ? 'rotate(45deg)' : 'none';
+    burgerElement.style.setProperty('--before-transform', burgerToggle.checked ? 'rotate(0)' : 'none');
+    burgerElement.style.setProperty('--before-top', burgerToggle.checked ? '0' : '-10px');
+    burgerElement.style.setProperty('--after-transform', burgerToggle.checked ? 'rotate(90deg)' : 'none');
+    burgerElement.style.setProperty('--after-top', burgerToggle.checked ? '0' : '10px');
 });

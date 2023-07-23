@@ -577,25 +577,16 @@ tr:hover {
         transition: 0.2s;
     }
     .burger_btn > span::before {
-        content: '';
-        top: -10px;
+        content: "";
+        transform: var(--before-transform, none);
+        top: var(--before-top, -10px);
     }
     .burger_btn > span::after {
-        content: '';
-        top: 10px;
+        content: "";
+        transform: var(--after-transform, none);
+        top: var(--after-top, 10px);
     }
 
-    #burger-toggle:checked ~ .burger_btn > span {
-        transform: rotate(45deg);
-    }
-    #burger-toggle:checked ~ .burger_btn > span::before {
-        top: 0;
-        transform: rotate(0);
-    }
-    #burger-toggle:checked ~ .burger_btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
     #burger-toggle:checked ~ nav {
         right: 0;
     }
