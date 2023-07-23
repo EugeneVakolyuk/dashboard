@@ -587,12 +587,23 @@ tr:hover {
         top: var(--after-top, 10px);
     }
 
+    #burger-toggle:checked ~ .burger_btn > span {
+        transform: rotate3d(0, 0, 1, 45deg);
+    }
+    #burger-toggle:checked ~ .burger_btn > span::before {
+        top: 0;
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    #burger-toggle:checked ~ .burger_btn > span::after {
+        top: 0;
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
     #burger-toggle:checked ~ nav {
         right: 0;
     }
     #burger-toggle:checked ~ nav .nav_item {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 
     /* Content */

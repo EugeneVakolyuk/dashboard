@@ -37,9 +37,9 @@ const body = document.body;
 
 burgerToggle.addEventListener('change', function() {
     body.style.overflow = burgerToggle.checked ? 'hidden' : 'auto';
-    burgerElement.style.transform = burgerToggle.checked ? 'rotate(45deg)' : 'none';
-    burgerElement.style.setProperty('--before-transform', burgerToggle.checked ? 'rotate(0)' : 'none');
-    burgerElement.style.setProperty('--before-top', burgerToggle.checked ? '0' : '-10px');
-    burgerElement.style.setProperty('--after-transform', burgerToggle.checked ? 'rotate(90deg)' : 'none');
-    burgerElement.style.setProperty('--after-top', burgerToggle.checked ? '0' : '10px');
+    // burgerElement.style.transform = burgerToggle.checked ? 'rotate(45deg)' : 'none';
+    // burgerElement.style.setProperty('--before-transform', burgerToggle.checked ? 'rotate(0)' : 'none');
+    // burgerElement.style.setProperty('--before-top', burgerToggle.checked ? '0' : '-10px');
+    // burgerElement.style.setProperty('--after-transform', burgerToggle.checked ? 'rotate(90deg)' : 'none');
+    // burgerElement.style.setProperty('--after-top', burgerToggle.checked ? '0' : '10px');
 });
