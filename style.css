@@ -518,13 +518,12 @@ tr:hover {
         background-color: white;
         width: 300px;
         border-radius: 0 0 0 20px;
-        transition: 0.4s ease-in-out all;
+        transition: 0.4s ease-in-out;
         z-index: 10;
     }
     .nav_item {
-        opacity: 0;
         transform: translateX(100px);
-        transition: 0.2s ease-in-out, opacity 0.4s;
+        transition: 0.2s ease-in-out;
     }
 
     .user {
@@ -578,32 +577,29 @@ tr:hover {
     }
     .burger_btn > span::before {
         content: "";
-        transform: var(--before-transform, none);
-        top: var(--before-top, -10px);
+        top: -10px;
     }
     .burger_btn > span::after {
         content: "";
-        transform: var(--after-transform, none);
-        top: var(--after-top, 10px);
+        top: 10px;
     }
 
     #burger-toggle:checked ~ .burger_btn > span {
-        transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate(45deg);
     }
     #burger-toggle:checked ~ .burger_btn > span::before {
         top: 0;
-        transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate(0);
     }
     #burger-toggle:checked ~ .burger_btn > span::after {
         top: 0;
-        transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate(90deg);
     }
     #burger-toggle:checked ~ nav {
         right: 0;
     }
     #burger-toggle:checked ~ nav .nav_item {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
 
     /* Content */
@@ -677,7 +673,6 @@ tr:hover {
         width: 100%;
         height: 100vh;
         background-color: white;
-        opacity: 0;
         visibility: hidden;
         border-radius: 0;
         transition: 0.2s ease-in-out all;
@@ -686,10 +681,9 @@ tr:hover {
     .nav_item {
         width: 80%;
         height: 35px;
-        opacity: 0;
         visibility: hidden;
         transform: translateX(0) translateY(20px);
-        transition: 0.2s ease-in-out all 0.2s;
+        transition: 0.2s ease-in-out 0.1s;
     }
     .nav_item__text {
         font-size: 24px;
@@ -714,8 +708,7 @@ tr:hover {
         padding: 2px 4px;
         transform: translateY(20px);
         visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-in-out all;
+        transition: 0.2s ease-in-out;
         z-index: 10;
     }
     .user__photo {
@@ -744,13 +737,11 @@ tr:hover {
     }
 
     #burger-toggle:checked ~ nav {
-        opacity: 1;
         visibility: visible;
     }
     #burger-toggle:checked ~ nav .nav_item,
     #burger-toggle:checked ~ .user {
         visibility: visible;
-        opacity: 1;
         transform: translateX(0);
     }
 }
